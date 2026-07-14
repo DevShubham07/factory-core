@@ -6,7 +6,7 @@
     "group": "A",
     "id": "A3",
     "build_order": 1,
-    "state": "SPECED",
+    "state": "BUILT",
     "cpm_tier": "medium",
     "rank_difficulty": "easiest rank",
     "notes": "SITE #1 — proves the full pipeline end-to-end (§15). Inputs: diagonal (in/cm), aspect ratio (16:9, 16:10, 21:9, 4:3, 32:9, custom W:H). Outputs: width/height (in+cm), area, PPI (optional resolution input), size-comparison table of common monitors. Pure math (w = d*cos(atan(h:w)) etc.). Edge cases: zero/negative input, absurd values (>200in warn), unit persistence in localStorage. MPA long-tail landing pages e.g. /27-inch-monitor-dimensions/.",
@@ -26,6 +26,24 @@
         "evidence": [
           "operator approval message 2026-07-14",
           "research/monitorsizecalculator/spec.md (BINDING)"
+        ]
+      },
+      {
+        "gate": "G3",
+        "passed_at": "2026-07-14",
+        "evidence": [
+          "template tests 6/6 unmodified",
+          "vercel 200+noindex",
+          "CI on scaffold commit"
+        ]
+      },
+      {
+        "gate": "G4",
+        "passed_at": "2026-07-14",
+        "evidence": [
+          "25/25 playwright incl. 19 verbatim acceptance pairs",
+          "independent verifier PASS",
+          "commits b253525 02d4df5 3e2cec1"
         ]
       }
     ],
