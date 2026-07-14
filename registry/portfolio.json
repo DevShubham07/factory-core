@@ -1,156 +1,156 @@
-{
-  "updated": "2026-07-14",
-  "sites": [
-    {
-      "slug": "monitorsizecalculator",
-      "domain": "monitorsizecalculator.com",
-      "name": "Monitor Size Calculator",
-      "group": "A",
-      "id": "A3",
-      "build_order": 1,
-      "state": "SPECED",
-      "cpm_tier": "medium",
-      "rank_difficulty": "easiest rank",
-      "notes": "SITE #1 — proves the full pipeline end-to-end (§15). Inputs: diagonal (in/cm), aspect ratio (16:9, 16:10, 21:9, 4:3, 32:9, custom W:H). Outputs: width/height (in+cm), area, PPI (optional resolution input), size-comparison table of common monitors. Pure math (w = d*cos(atan(h:w)) etc.). Edge cases: zero/negative input, absurd values (>200in warn), unit persistence in localStorage. MPA long-tail landing pages e.g. /27-inch-monitor-dimensions/.",
-      "backup_domains": [],
-      "gates": [
-        {
-          "gate": "G1",
-          "passed_at": "2026-07-14",
-          "evidence": [
-            "research/monitorsizecalculator/g1-evidence.md",
-            "research/monitorsizecalculator/scorecard.json"
-          ]
-        },
-        {
-          "gate": "G2",
-          "passed_at": "2026-07-14",
-          "evidence": [
-            "operator approval message 2026-07-14",
-            "research/monitorsizecalculator/spec.md (BINDING)"
-          ]
-        }
-      ],
-      "main_keyword": "screen size calculator"
-    },
-    {
-      "slug": "speechlengthcalculator",
-      "domain": "speechlengthcalculator.com",
-      "name": "Speech Length Calculator",
-      "group": "A",
-      "id": "A5",
-      "build_order": 2,
-      "state": "IDEA",
-      "cpm_tier": "low",
-      "rank_difficulty": "medium — easiest build",
-      "notes": "Paste text OR word-count input -> speaking time at 100-180 WPM (slider + slow/avg/fast presets) + silent-reading time. Live word/char count. Edge cases: empty input, huge paste (cap 200k chars), unicode. Landing pages e.g. /how-many-words-is-a-5-minute-speech/.",
-      "backup_domains": []
-    },
-    {
-      "slug": "onlinepdruler",
-      "domain": "onlinepdruler.com",
-      "name": "PD (Pupillary Distance) Ruler",
-      "group": "A",
-      "id": "A1",
-      "build_order": 3,
-      "state": "IDEA",
-      "cpm_tier": "high (eyewear)",
-      "rank_difficulty": "medium",
-      "notes": "On-screen mm ruler calibrated by: credit-card width (85.60mm nominal per ISO/IEC 7810 ID-1; real cards 85.37-85.90mm, state in accuracy notes), known screen size, or manual slider. Step-by-step PD measurement guide (mirror method + photo method, textual only). Medical-adjacent disclaimer required (design doc §13.6): not a medical device, verify with your optician. No camera/ML in v1 (build risk) — documented as future.",
-      "backup_domains": []
-    },
-    {
-      "slug": "realprotractor",
-      "domain": "realprotractor.com",
-      "name": "Online Protractor",
-      "group": "A",
-      "id": "A4",
-      "build_order": 4,
-      "state": "IDEA",
-      "cpm_tier": "low-medium",
-      "rank_difficulty": "medium",
-      "notes": "SVG protractor (180/360 degree toggle), draggable rotating arm(s) reading out angle; image-upload underlay to measure angles in photos; keyboard nudge. Edge cases: touch support, retina scaling. Note: exact-match domain onlineprotractor.com is verified TAKEN (design doc §2.2) — realprotractor.com is the selected available domain for this tool.",
-      "backup_domains": []
-    },
-    {
-      "slug": "comparephonesizes",
-      "domain": "comparephonesizes.com",
-      "name": "Phone Size Comparison",
-      "group": "A",
-      "id": "A2",
-      "build_order": 5,
-      "state": "IDEA",
-      "cpm_tier": "medium-high",
-      "rank_difficulty": "medium-high",
-      "notes": "Select 2-3 phones -> to-scale side-by-side outlines (mm dimensions) + spec table (dimensions/weight/display). Dataset data/phones.json seeded with ~100 current phones; every entry carries source + retrieved fields (manufacturer spec pages) — AI must fetch real dimensions, never invent (design doc §7.2); HUMAN spot-checks 10 random entries. Landing pages per popular pair e.g. /iphone-16-vs-galaxy-s25-size/. Dataset discipline proven on this site per rollout roadmap (§15).",
-      "backup_domains": [
-        "phonesizecomparison.com"
-      ]
-    },
-    {
-      "slug": "jsondiffchecker",
-      "domain": "jsondiffchecker.com",
-      "name": "JSON Diff Checker",
-      "group": "B",
-      "id": "B1",
-      "build_order": 6,
-      "state": "IDEA",
-      "cpm_tier": "adblock-discounted",
-      "rank_difficulty": "medium competition (jsondiff.com)",
-      "notes": "Two panes -> structural diff (added/removed/changed), text-diff fallback for invalid JSON, all client-side. ASSUMPTION: design doc §2.2 backups list is a general pool not explicitly mapped per-slug except A2; backup_domains left empty here rather than inventing an association.",
-      "backup_domains": []
-    },
-    {
-      "slug": "yamltojsonconverter",
-      "domain": "yamltojsonconverter.com",
-      "name": "YAML <-> JSON Converter",
-      "group": "B",
-      "id": "B4",
-      "build_order": 7,
-      "state": "IDEA",
-      "cpm_tier": "adblock-discounted",
-      "rank_difficulty": "medium",
-      "notes": "Bidirectional converter, error surfacing with line numbers, client-side (use a maintained parser lib, pinned at P2).",
-      "backup_domains": []
-    },
-    {
-      "slug": "curltocode",
-      "domain": "curltocode.com",
-      "name": "cURL -> Code",
-      "group": "B",
-      "id": "B5",
-      "build_order": 8,
-      "state": "IDEA",
-      "cpm_tier": "adblock-discounted",
-      "rank_difficulty": "curlconverter.com is OSS incumbent — differentiate on UX",
-      "notes": "Parse curl command -> generate Python requests / JS fetch / Node axios / PHP / Go snippets. Start with the 80% subset of curl flags; document unsupported flags explicitly.",
-      "backup_domains": []
-    },
-    {
-      "slug": "sqlformattertool",
-      "domain": "sqlformattertool.com",
-      "name": "SQL Formatter",
-      "group": "B",
-      "id": "B2",
-      "build_order": 9,
-      "state": "IDEA",
-      "cpm_tier": "adblock-discounted",
-      "rank_difficulty": "hard competition — accept",
-      "notes": "Format/beautify + minify, dialect select, client-side via a maintained formatter lib (pinned at P2).",
-      "backup_domains": []
-    },
-    {
-      "slug": "regextestertool",
-      "domain": "regextestertool.com",
-      "name": "Regex Tester",
-      "group": "B",
-      "id": "B3",
-      "build_order": 10,
-      "state": "IDEA",
-      "cpm_tier": "adblock-discounted",
-      "rank_difficulty": "hardest (regex101) — build last",
-      "notes": "Live match highlighting, groups table, cheatsheet, common-patterns library. JS regex engine only (state this on-page).",
-      "backup_domains": []
-    }
-  ]
-}
+[
+  {
+    "slug": "monitorsizecalculator",
+    "domain": "monitorsizecalculator.com",
+    "name": "Monitor Size Calculator",
+    "group": "A",
+    "id": "A3",
+    "build_order": 1,
+    "state": "SPECED",
+    "cpm_tier": "medium",
+    "rank_difficulty": "easiest rank",
+    "notes": "SITE #1 — proves the full pipeline end-to-end (§15). Inputs: diagonal (in/cm), aspect ratio (16:9, 16:10, 21:9, 4:3, 32:9, custom W:H). Outputs: width/height (in+cm), area, PPI (optional resolution input), size-comparison table of common monitors. Pure math (w = d*cos(atan(h:w)) etc.). Edge cases: zero/negative input, absurd values (>200in warn), unit persistence in localStorage. MPA long-tail landing pages e.g. /27-inch-monitor-dimensions/.",
+    "backup_domains": [],
+    "gates": [
+      {
+        "gate": "G1",
+        "passed_at": "2026-07-14",
+        "evidence": [
+          "research/monitorsizecalculator/g1-evidence.md",
+          "research/monitorsizecalculator/scorecard.json"
+        ]
+      },
+      {
+        "gate": "G2",
+        "passed_at": "2026-07-14",
+        "evidence": [
+          "operator approval message 2026-07-14",
+          "research/monitorsizecalculator/spec.md (BINDING)"
+        ]
+      }
+    ],
+    "main_keyword": "screen size calculator",
+    "keyword": "screen size calculator",
+    "template_tag": "template-v0.1.0-6-gdc0c679",
+    "updated_at": "2026-07-14T13:55:07.572Z"
+  },
+  {
+    "slug": "speechlengthcalculator",
+    "domain": "speechlengthcalculator.com",
+    "name": "Speech Length Calculator",
+    "group": "A",
+    "id": "A5",
+    "build_order": 2,
+    "state": "IDEA",
+    "cpm_tier": "low",
+    "rank_difficulty": "medium — easiest build",
+    "notes": "Paste text OR word-count input -> speaking time at 100-180 WPM (slider + slow/avg/fast presets) + silent-reading time. Live word/char count. Edge cases: empty input, huge paste (cap 200k chars), unicode. Landing pages e.g. /how-many-words-is-a-5-minute-speech/.",
+    "backup_domains": []
+  },
+  {
+    "slug": "onlinepdruler",
+    "domain": "onlinepdruler.com",
+    "name": "PD (Pupillary Distance) Ruler",
+    "group": "A",
+    "id": "A1",
+    "build_order": 3,
+    "state": "IDEA",
+    "cpm_tier": "high (eyewear)",
+    "rank_difficulty": "medium",
+    "notes": "On-screen mm ruler calibrated by: credit-card width (85.60mm nominal per ISO/IEC 7810 ID-1; real cards 85.37-85.90mm, state in accuracy notes), known screen size, or manual slider. Step-by-step PD measurement guide (mirror method + photo method, textual only). Medical-adjacent disclaimer required (design doc §13.6): not a medical device, verify with your optician. No camera/ML in v1 (build risk) — documented as future.",
+    "backup_domains": []
+  },
+  {
+    "slug": "realprotractor",
+    "domain": "realprotractor.com",
+    "name": "Online Protractor",
+    "group": "A",
+    "id": "A4",
+    "build_order": 4,
+    "state": "IDEA",
+    "cpm_tier": "low-medium",
+    "rank_difficulty": "medium",
+    "notes": "SVG protractor (180/360 degree toggle), draggable rotating arm(s) reading out angle; image-upload underlay to measure angles in photos; keyboard nudge. Edge cases: touch support, retina scaling. Note: exact-match domain onlineprotractor.com is verified TAKEN (design doc §2.2) — realprotractor.com is the selected available domain for this tool.",
+    "backup_domains": []
+  },
+  {
+    "slug": "comparephonesizes",
+    "domain": "comparephonesizes.com",
+    "name": "Phone Size Comparison",
+    "group": "A",
+    "id": "A2",
+    "build_order": 5,
+    "state": "IDEA",
+    "cpm_tier": "medium-high",
+    "rank_difficulty": "medium-high",
+    "notes": "Select 2-3 phones -> to-scale side-by-side outlines (mm dimensions) + spec table (dimensions/weight/display). Dataset data/phones.json seeded with ~100 current phones; every entry carries source + retrieved fields (manufacturer spec pages) — AI must fetch real dimensions, never invent (design doc §7.2); HUMAN spot-checks 10 random entries. Landing pages per popular pair e.g. /iphone-16-vs-galaxy-s25-size/. Dataset discipline proven on this site per rollout roadmap (§15).",
+    "backup_domains": [
+      "phonesizecomparison.com"
+    ]
+  },
+  {
+    "slug": "jsondiffchecker",
+    "domain": "jsondiffchecker.com",
+    "name": "JSON Diff Checker",
+    "group": "B",
+    "id": "B1",
+    "build_order": 6,
+    "state": "IDEA",
+    "cpm_tier": "adblock-discounted",
+    "rank_difficulty": "medium competition (jsondiff.com)",
+    "notes": "Two panes -> structural diff (added/removed/changed), text-diff fallback for invalid JSON, all client-side. ASSUMPTION: design doc §2.2 backups list is a general pool not explicitly mapped per-slug except A2; backup_domains left empty here rather than inventing an association.",
+    "backup_domains": []
+  },
+  {
+    "slug": "yamltojsonconverter",
+    "domain": "yamltojsonconverter.com",
+    "name": "YAML <-> JSON Converter",
+    "group": "B",
+    "id": "B4",
+    "build_order": 7,
+    "state": "IDEA",
+    "cpm_tier": "adblock-discounted",
+    "rank_difficulty": "medium",
+    "notes": "Bidirectional converter, error surfacing with line numbers, client-side (use a maintained parser lib, pinned at P2).",
+    "backup_domains": []
+  },
+  {
+    "slug": "curltocode",
+    "domain": "curltocode.com",
+    "name": "cURL -> Code",
+    "group": "B",
+    "id": "B5",
+    "build_order": 8,
+    "state": "IDEA",
+    "cpm_tier": "adblock-discounted",
+    "rank_difficulty": "curlconverter.com is OSS incumbent — differentiate on UX",
+    "notes": "Parse curl command -> generate Python requests / JS fetch / Node axios / PHP / Go snippets. Start with the 80% subset of curl flags; document unsupported flags explicitly.",
+    "backup_domains": []
+  },
+  {
+    "slug": "sqlformattertool",
+    "domain": "sqlformattertool.com",
+    "name": "SQL Formatter",
+    "group": "B",
+    "id": "B2",
+    "build_order": 9,
+    "state": "IDEA",
+    "cpm_tier": "adblock-discounted",
+    "rank_difficulty": "hard competition — accept",
+    "notes": "Format/beautify + minify, dialect select, client-side via a maintained formatter lib (pinned at P2).",
+    "backup_domains": []
+  },
+  {
+    "slug": "regextestertool",
+    "domain": "regextestertool.com",
+    "name": "Regex Tester",
+    "group": "B",
+    "id": "B3",
+    "build_order": 10,
+    "state": "IDEA",
+    "cpm_tier": "adblock-discounted",
+    "rank_difficulty": "hardest (regex101) — build last",
+    "notes": "Live match highlighting, groups table, cheatsheet, common-patterns library. JS regex engine only (state this on-page).",
+    "backup_domains": []
+  }
+]
