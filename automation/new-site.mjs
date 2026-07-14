@@ -9,12 +9,10 @@
  *   --name <name>          (required) human-readable site/tool name.
  *   --keyword <keyword>    (required) main SEO keyword.
  *   --description <text>   (required) <=160 char meta description.
- *   --org <github-org>     GitHub org to substitute for the REPLACE_ORG
- *                          placeholder in .github/workflows/ci.yml and
- *                          renovate.json. Default: "REPLACE_ORG" (a no-op -
- *                          the placeholder is left untouched and a [warn] is
- *                          printed, since the plan's arg sketch shows
- *                          "[--org REPLACE_ORG]" as the flag's own default).
+ *   --org <github-org>     GitHub org/user to substitute in .github/workflows/ci.yml
+ *                          and renovate.json. Default: "DevShubham07" (the
+ *                          template's real org — override only when scaffolding
+ *                          under a different account/org).
  *   --source <path>        site-template directory to copy from. Default:
  *                          C:\Users\gshub\OneDrive\Desktop\CompellingFuture\factory\site-template
  *   --dest <path>           target directory. Default: sibling folder
@@ -81,7 +79,7 @@ function parseArgs(argv) {
     name: null,
     keyword: null,
     description: null,
-    org: "REPLACE_ORG",
+    org: "DevShubham07",
     source: DEFAULT_SOURCE,
     dest: null,
     portfolio: DEFAULT_PORTFOLIO,
@@ -196,16 +194,12 @@ function rewriteOrgPlaceholder(destDir, sourceDir, relPath, org, dryRun) {
     return;
   }
   let text = readFileSync(readFrom, "utf8");
-  if (org === "REPLACE_ORG") {
-    console.log(`[warn] --org not provided: leaving REPLACE_ORG placeholder in ${relPath}`);
-    return;
-  }
   const before = text;
-  text = text.split("REPLACE_ORG").join(org);
-  if (text === before) {
-    console.log(`[warn] ${relPath}: no REPLACE_ORG occurrences found`);
+  text = text.split("DevShubham07").join(org);
+  if (text === before && org !== "DevShubham07") {
+    console.log(`[warn] ${relPath}: no DevShubham07 occurrences found`);
   }
-  if (dryRun) console.log(`  rewrite ${file} (REPLACE_ORG -> ${org})`);
+  if (dryRun) console.log(`  rewrite ${file} (org -> ${org})`);
   else writeFileSync(file, text, "utf8");
 }
 

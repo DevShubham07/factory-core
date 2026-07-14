@@ -51,7 +51,7 @@ registers/updates the site in `factory-core/registry/portfolio.json`.
   `playwright-report`.
 - Rewrites `site.config.mjs` (name, domain, keyword, description,
   vercelSlug, legalName), `package.json` name, `vercel.json` host value,
-  `REPLACE_ORG` in `.github/workflows/ci.yml` and `renovate.json` (only if
+  `DevShubham07` in `.github/workflows/ci.yml` and `renovate.json` (only if
   `--org` is given — otherwise the placeholder is left in place and a
   `[warn]` is printed), and `site.json` (slug, domain, `template_tag`;
   `state` stays `IDEA` — scaffolding alone passes no gate).
