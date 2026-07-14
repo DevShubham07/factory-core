@@ -1,0 +1,135 @@
+{
+  "main_keyword": {
+    "keyword": "monitor size calculator",
+    "volume_estimate": "1k-5k US/mo [ESTIMATE]; broader parent 'screen size calculator' likely 10k-30k US/mo [ESTIMATE]",
+    "volume_source": "No keyword-tool data was capturable in SERPs. Derived from public signals observed via WebSearch: (1) at least 6 dedicated micro-tool pages rank for the exact phrase (screenresolutionchecker.com/monitor-size-calculator, calcpedia.com/monitor-size-calculator.html, sagecalculator.com/monitor-dimensions-calculator, screen-size.info, seethrudisplays.com, multimonitorcalculator.com) — that density of purpose-built pages implies commercially interesting volume; (2) Omni Calculator (claims 18M+ visits/mo across ~3,000 calculators, i.e. low-thousands avg per calculator page) maintains separate Screen Size, Screen Ratio, PPI and TV Size calculators, implying each variant clears their build threshold; (3) 'screen size calculator' SERP is broader and more contested (Omni, inchcalculator, toolstud.io, prodisplay), suggesting it is the higher-volume head term."
+  },
+  "supporting_keywords": [
+    {
+      "keyword": "screen size calculator",
+      "intent": "tool",
+      "volume_estimate": "10k-30k US/mo [ESTIMATE] — most contested SERP observed (Omni, inchcalculator, toolstud.io, screen-size.info, prodisplay all have dedicated pages)"
+    },
+    {
+      "keyword": "monitor dimensions calculator",
+      "intent": "tool",
+      "volume_estimate": "low thousands US/mo [ESTIMATE] — sagecalculator.com and calcpedia.com built exact-match pages for it"
+    },
+    {
+      "keyword": "screen dimensions calculator",
+      "intent": "tool",
+      "volume_estimate": "not directly observable; prinds.com/tools/screenDimensions and planetcalc rank for diagonal-to-width-height queries"
+    },
+    {
+      "keyword": "monitor ppi calculator / ppi calculator",
+      "intent": "tool",
+      "volume_estimate": "likely 10k+ US/mo for 'ppi calculator' [ESTIMATE] — Omni, calculatorsoup, inchcalculator, sven.de/dpi all maintain dedicated pages"
+    },
+    {
+      "keyword": "aspect ratio calculator",
+      "intent": "tool (adjacent)",
+      "volume_estimate": "high [ESTIMATE] — Omni has a standalone page; frequently bundled with screen-size tools in SERPs"
+    },
+    {
+      "keyword": "27 inch monitor dimensions",
+      "intent": "informational",
+      "volume_estimate": "strong demand signal: 10+ dedicated ranking pages observed (monitorsizecomparison.com/monitors/27-inch, measuringstuff, calconi, innobytech, onecomputerguy, techbullish, splaitor, even AliExpress SEO wiki articles)"
+    },
+    {
+      "keyword": "24 inch monitor size in cm",
+      "intent": "informational",
+      "volume_estimate": "observable demand: calconi.com per-size cm pages, remarkt 'how many cm is 24 inch monitor', Quora thread all rank"
+    },
+    {
+      "keyword": "32 inch monitor dimensions",
+      "intent": "informational",
+      "volume_estimate": "dedicated pages observed on monitorsizecomparison.com, dimensions.com, Quora, plus 2 AliExpress SEO-wiki articles targeting it"
+    },
+    {
+      "keyword": "34 inch ultrawide monitor dimensions",
+      "intent": "informational",
+      "volume_estimate": "PCPartPicker forum thread + monitorsizecomparison.com + easycompare.app + dimensions.com pages observed"
+    },
+    {
+      "keyword": "monitor size comparison",
+      "intent": "comparison/tool",
+      "volume_estimate": "an entire exact-match domain exists (monitorsizecomparison.com) plus displaywars.com, screensizechecker.com, howbigg.com — strong tool-intent demand"
+    },
+    {
+      "keyword": "24 vs 27 inch monitor",
+      "intent": "comparison",
+      "volume_estimate": "RTINGS has a dedicated editorial page (24-vs-27-inch); displaywars has both permutations as static URLs"
+    },
+    {
+      "keyword": "27 vs 32 inch monitor",
+      "intent": "comparison",
+      "volume_estimate": "RTINGS dedicated page (27-vs-32-inch) observed ranking for multiple queries in this cluster"
+    },
+    {
+      "keyword": "monitor viewing distance calculator",
+      "intent": "tool",
+      "volume_estimate": "usecalcpro, andreabrandi.com, hometheaterengineering, RTINGS size-to-distance all rank — adjacent tool demand"
+    },
+    {
+      "keyword": "how wide is a 27 inch monitor",
+      "intent": "informational (question)",
+      "volume_estimate": "question-form query returns full SERP incl. RTINGS, displaywars, HP Tech Takes"
+    },
+    {
+      "keyword": "tv size calculator",
+      "intent": "tool (distinct cluster)",
+      "volume_estimate": "distinct intent: TV cluster is size-to-VIEWING-DISTANCE (RTINGS, Omni tv-size-distance, inchcalculator) not diagonal-to-dimensions; keep separate page if targeted"
+    }
+  ],
+  "questions": [
+    "How wide is a 27 inch monitor?",
+    "What are the dimensions of a 24-inch monitor?",
+    "How big is a 32-inch monitor?",
+    "How many cm is a 24 inch monitor?",
+    "Is a 32 inch monitor too big for gaming (or FPS/competitive play)?",
+    "Is monitor size measured diagonally, and does it include the bezel?",
+    "How far should I sit from a 27 inch monitor?",
+    "Why does a 34-inch ultrawide feel smaller than a 27-inch 16:9 monitor?",
+    "Is 1080p resolution good enough on a 32 inch monitor?",
+    "How much desk space (width and depth) does a 32 inch or 34 inch monitor need?",
+    "What monitor size should I get for my viewing distance?",
+    "What is the actual screen area difference between a 24 inch and 27 inch monitor?"
+  ],
+  "landing_pages": [
+    {
+      "path": "/27-inch-monitor-dimensions/",
+      "target_keyword": "27 inch monitor dimensions",
+      "rationale": "Highest-density size query observed: 10+ dedicated ranking pages including AliExpress programmatic SEO articles chasing it — clear demand worth an exact-match page."
+    },
+    {
+      "path": "/24-inch-monitor-dimensions/",
+      "target_keyword": "24 inch monitor dimensions in cm",
+      "rationale": "Calconi, remarkt, Quora, measuringstuff and monitorsizecomparison.com all rank for cm/inch variants; strong metric-conversion sub-intent (US + international spillover)."
+    },
+    {
+      "path": "/32-inch-monitor-dimensions/",
+      "target_keyword": "32 inch monitor dimensions",
+      "rationale": "Dedicated pages on monitorsizecomparison.com, dimensions.com and two AliExpress wiki articles observed; pairs with the 'too big for gaming' question for FAQ pickup."
+    },
+    {
+      "path": "/34-inch-ultrawide-monitor-dimensions/",
+      "target_keyword": "34 inch ultrawide monitor dimensions",
+      "rationale": "PCPartPicker forum thread ranking (weak content = easy win); 21:9 math is non-obvious, exactly what the calculator differentiates on."
+    },
+    {
+      "path": "/monitor-size-comparison/",
+      "target_keyword": "monitor size comparison (24 vs 27 vs 32 vs 34)",
+      "rationale": "Entire exact-match domain (monitorsizecomparison.com) plus displaywars/easycompare rank — validates the comparison-table feature as its own landing page."
+    },
+    {
+      "path": "/monitor-ppi-calculator/",
+      "target_keyword": "monitor ppi calculator",
+      "rationale": "Omni, calculatorsoup, inchcalculator and sven.de/dpi each keep standalone PPI pages; our tool already computes PPI so this page is near-free to add."
+    },
+    {
+      "path": "/monitor-size-in-cm/",
+      "target_keyword": "monitor size in cm converter",
+      "rationale": "Calconi runs a whole per-size 'X-inch in cm' page series that ranks — signals sustained inch-to-cm conversion demand for screens."
+    }
+  ]
+}
