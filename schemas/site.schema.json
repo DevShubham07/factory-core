@@ -1,0 +1,105 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://factory-core/schemas/site.schema.json",
+  "title": "Site State (site.json)",
+  "description": "Per-site state file. Source: plan doc Appendix A, completed with concrete property types. Identity + gate log + external IDs for one site-<slug> repo.",
+  "type": "object",
+  "required": ["slug", "domain", "state", "template_tag", "gates"],
+  "additionalProperties": true,
+  "properties": {
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "URL-safe site identifier, matches repo suffix site-<slug>."
+    },
+    "domain": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Bare production domain, no protocol, no trailing slash."
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "IDEA",
+        "VALIDATED",
+        "SPECED",
+        "SCAFFOLDED",
+        "BUILT",
+        "QA_PASSED",
+        "SEO_DONE",
+        "DEPLOYED",
+        "DOMAIN_LIVE",
+        "INDEXED",
+        "MONETIZED",
+        "OPERATING",
+        "PARKED",
+        "KILLED"
+      ],
+      "description": "Lifecycle state per plan §3.2. PARKED/KILLED are terminal and reachable from any state."
+    },
+    "template_tag": {
+      "type": "string",
+      "description": "site-template git tag (or template-v<package-version> fallback) this site was scaffolded from."
+    },
+    "scores": {
+      "description": "Selection-engine scorecard (plan §2.1), null until P1/G1 runs.",
+      "oneOf": [
+        { "type": "null" },
+        {
+          "type": "object",
+          "properties": {
+            "C": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "D": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "M": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "B": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "R": { "type": "integer", "minimum": 0, "maximum": 5 },
+            "total": { "type": "number", "minimum": 0, "maximum": 35 }
+          },
+          "additionalProperties": false
+        }
+      ]
+    },
+    "gates": {
+      "type": "array",
+      "description": "Append-only gate-pass log (plan §3.3: 'scripts and skills append; humans/AI never hand-edit gate history').",
+      "items": {
+        "type": "object",
+        "required": ["gate", "passed_at", "evidence"],
+        "properties": {
+          "gate": {
+            "type": "string",
+            "pattern": "^G([0-9]|10)$",
+            "description": "Gate identifier G0-G10 per plan §3.2/§8."
+          },
+          "passed_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "evidence": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "File paths, URLs, or command output snippets proving the gate's objective checks passed."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "external": {
+      "type": "object",
+      "description": "External system IDs (plan §3.3 / §4.7). Null until provisioned.",
+      "properties": {
+        "vercel_project": { "type": ["string", "null"] },
+        "gsc_property": { "type": ["string", "null"] },
+        "sentry_dsn": { "type": ["string", "null"] },
+        "adsense_pub": { "type": ["string", "null"] },
+        "indexnow_key_file": { "type": ["string", "null"] }
+      },
+      "additionalProperties": true
+    },
+    "ESTIMATES": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Any unverified numbers carried in content, per plan §7.1 rule 3 ([ESTIMATE] labeling)."
+    }
+  }
+}

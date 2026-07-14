@@ -1,0 +1,72 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://factory-core/schemas/scorecard.schema.json",
+  "title": "Selection Scorecard (research/scorecard.json)",
+  "description": "Output of the P-01 research-validate skill / selection engine, plan §2.1. Score = 2C + 1.5D + 1.5M + B + R (max 35). Build >= 22, Park 18-21, Reject < 18.",
+  "type": "object",
+  "required": ["keyword", "C", "D", "M", "B", "R", "total", "volume", "serp", "decision"],
+  "additionalProperties": true,
+  "properties": {
+    "keyword": { "type": "string", "description": "Main target keyword validated in P1." },
+    "domain": { "type": "string" },
+    "C": { "type": "integer", "minimum": 0, "maximum": 5, "description": "Competition score (5 = weak/thin top-10)." },
+    "D": { "type": "integer", "minimum": 0, "maximum": 5, "description": "Domain score (D-11: premium/aftermarket names score 0 regardless of quality)." },
+    "M": { "type": "integer", "minimum": 0, "maximum": 5, "description": "Monetization score (CPM tier minus adblock exposure)." },
+    "B": { "type": "integer", "minimum": 0, "maximum": 5, "description": "Build-difficulty score (5 = easiest, static calc)." },
+    "R": { "type": "integer", "minimum": 0, "maximum": 5, "description": "Risk score (5 = safest; YMYL/liability/thin-content deductions)." },
+    "total": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 35,
+      "description": "2C + 1.5D + 1.5M + B + R."
+    },
+    "volume": {
+      "type": "object",
+      "required": ["value", "source", "estimate"],
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": ["number", "null"],
+          "description": "Monthly US search volume for the main keyword. Floor per plan §2.1 step 2: >= 1000."
+        },
+        "source": {
+          "type": "string",
+          "description": "Where the number came from, e.g. 'Ahrefs Free Keyword Generator', 'Google Keyword Planner', or '[ESTIMATE]'."
+        },
+        "estimate": {
+          "type": "boolean",
+          "description": "true if this number lacks a captured source artifact (plan §7.1 rule 3)."
+        }
+      }
+    },
+    "serp": {
+      "type": "array",
+      "minItems": 0,
+      "description": "Top-10 (or more) SERP evidence rows captured in P1 step 3.",
+      "items": {
+        "type": "object",
+        "required": ["position", "url", "type"],
+        "properties": {
+          "position": { "type": "integer", "minimum": 1 },
+          "url": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["dedicated_tool", "multi_tool_portal", "forum", "gov", "thin_page", "other"]
+          },
+          "notes": { "type": "string" }
+        },
+        "additionalProperties": true
+      }
+    },
+    "decision": {
+      "type": "string",
+      "enum": ["build", "park", "reject"],
+      "description": "Derived from total per the Build>=22 / Park 18-21 / Reject<18 thresholds."
+    },
+    "estimates": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Free-text list of every [ESTIMATE]-tagged claim in this scorecard, mirrored into site.json ESTIMATES[] at P2."
+    }
+  }
+}

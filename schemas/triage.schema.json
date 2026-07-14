@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://factory-core/schemas/triage.schema.json",
+  "title": "Monitoring Triage Report",
+  "description": "Output of the P-11 monitor-triage skill (plan §6.3/§10 P-11, §11.2). Every monitoring event classified noise/known/new with a required action.",
+  "type": "object",
+  "required": ["events"],
+  "additionalProperties": true,
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "site_slug": { "type": "string", "description": "Optional: set when the report covers a single site rather than the whole fleet." },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "severity", "classification", "action"],
+        "additionalProperties": true,
+        "properties": {
+          "source": {
+            "type": "string",
+            "enum": ["sentry", "uptime", "lychee", "ci", "gsc", "other"],
+            "description": "Feed that produced the event (plan §11.2: Sentry / Better Stack / lychee / CI-red / GSC)."
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low", "info"]
+          },
+          "classification": {
+            "type": "string",
+            "enum": ["noise", "known", "new"],
+            "description": "noise = ignorable; known = matches an existing tracked issue; new = requires a new issue (P-11 acceptance criteria)."
+          },
+          "action": {
+            "type": "string",
+            "description": "What happens next: e.g. 'filed issue #123', 'escalate to sonnet', 'no action (noise)'."
+          },
+          "site_slug": { "type": "string" },
+          "detail": { "type": "string" },
+          "issue_url": { "type": ["string", "null"] }
+        }
+      }
+    }
+  }
+}

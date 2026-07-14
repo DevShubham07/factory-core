@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "monitorsizecalculator",
+    "domain": "monitorsizecalculator.com",
+    "name": "Monitor Size Calculator",
+    "keyword": "monitor size calculator",
+    "state": "OPERATING",
+    "template_tag": "template-v1.0.0",
+    "scores": { "C": 4, "D": 5, "M": 3, "B": 5, "R": 4, "total": 27.5 },
+    "created_at": "2026-07-01T09:00:00.000Z",
+    "updated_at": "2026-07-10T12:00:00.000Z",
+    "last_gate": { "gate": "G9", "timestamp": "2026-07-10T12:00:00.000Z" },
+    "urls": { "vercel": "https://site-monitorsizecalculator.vercel.app", "production": "https://monitorsizecalculator.com" },
+    "external": {
+      "vercel_project": "site-monitorsizecalculator",
+      "gsc_property": "sc-domain:monitorsizecalculator.com",
+      "sentry_dsn": "https://fixture@o0.ingest.sentry.io/0",
+      "adsense_pub": null,
+      "indexnow_key": "3019c3c08a8733546e70971b7a958be0",
+      "indexnow_key_file": "https://monitorsizecalculator.com/3019c3c08a8733546e70971b7a958be0.txt"
+    }
+  },
+  {
+    "slug": "speechlengthcalculator",
+    "domain": "speechlengthcalculator.com",
+    "name": "Speech Length Calculator",
+    "keyword": "speech length calculator",
+    "state": "SCAFFOLDED",
+    "template_tag": "template-v1.0.0",
+    "scores": null,
+    "created_at": "2026-07-12T09:00:00.000Z",
+    "updated_at": "2026-07-12T09:00:00.000Z",
+    "last_gate": { "gate": "G3", "timestamp": "2026-07-12T09:00:00.000Z" },
+    "urls": { "vercel": "https://site-speechlengthcalculator.vercel.app", "production": null },
+    "external": {
+      "vercel_project": "site-speechlengthcalculator",
+      "gsc_property": null,
+      "sentry_dsn": null,
+      "adsense_pub": null,
+      "indexnow_key": null,
+      "indexnow_key_file": null
+    }
+  },
+  {
+    "slug": "onlinepdruler",
+    "domain": "onlinepdruler.com",
+    "name": "PD Ruler",
+    "keyword": "pupillary distance ruler",
+    "state": "IDEA",
+    "template_tag": null,
+    "scores": null,
+    "created_at": "2026-06-01T09:00:00.000Z",
+    "updated_at": "2026-06-01T09:00:00.000Z",
+    "last_gate": null,
+    "urls": { "vercel": null, "production": null },
+    "external": {
+      "vercel_project": null,
+      "gsc_property": null,
+      "sentry_dsn": null,
+      "adsense_pub": null,
+      "indexnow_key": null,
+      "indexnow_key_file": null
+    }
+  }
+]

@@ -1,0 +1,5 @@
+# Fixture domain list for rdap-check.mjs --fixture (G0 self-test).
+# google.com is a stable, known-TAKEN .com used to exercise the real
+# rdap.verisign.com endpoint end-to-end without depending on any of the
+# portfolio's candidate domains (which may get registered over time).
+google.com

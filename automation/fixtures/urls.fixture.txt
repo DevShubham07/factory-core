@@ -1,0 +1,6 @@
+# Fixture URL list for indexnow.mjs --file (G0 dry-run exercise).
+# Fictitious URLs on a placeholder domain - never POSTed for real except
+# in --dry-run mode, which makes no network call.
+https://example-fixture-site.com/
+https://example-fixture-site.com/about/
+https://example-fixture-site.com/privacy/

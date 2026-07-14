@@ -1,0 +1,14 @@
+{
+  "_fixture": true,
+  "_note": "FIXTURE ONLY - this key pair was generated locally for G0 dry-run testing of gsc-submit.mjs. It is structurally a valid service-account JSON (so JWT signing succeeds) but is NOT registered with any real Google Cloud project, so a real (non-dry-run) call against it will fail at the token-exchange step. Never use for a real submission.",
+  "type": "service_account",
+  "project_id": "factory-fixture-project",
+  "private_key_id": "fixturekeyid0000000000000000000000000000",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDD9wxFev71N2Rz\nunti9rlxlpvpYYIUB+Vsvawel6OmVRroqUTYEosL7JycADSDdXr3lyjjtIFN86Nf\n5dn5vhObP7rXbOsHyAAct58wysSi+CBhZYZmBfqojEFV97/HmkUzOLxvdoHQvTnM\ntd2yBVJs3SSnNRfp3QExvvaAIU4ohBfOEyFVPc7RohKlppc43kLLy2arpqe5YJwg\nbFnzGs7VqglzKBPEqRHVY0MBoq+qHTG4VZvBckz2TXbBbShBTXgTOGq0yKxHBvT8\n2qgCeg9T+gdM56zFa6iSOPN4c2OlcBMXQS+AZFKI0X0idD4XbZjELz5Csk8AH7oI\nzriVjUnjAgMBAAECggEAXgqgKnXAhbgr7je3P8JMMx0GPETtciRp7rnFMDcwM0HT\nNIUKwzB+5t2JOHoGuXF27ftuBXxZsylxJTO+W9HiQdYfGYOs9KJ/n0hlTjp4jAbM\nL0FT8oD7DcilEBbhQ24euFqJX2o9GQm+A6XhOq3AJPspPE7H55SGHrPYQpv5EIqg\nHTxu0Pef/72b3uCC+7fGPtjY9fnOBdKQaUiISm0qWAht9pQftpedMWe9f8cPwjZM\nEqTbyyORq5t+3KKtcD9mQpjDLxseUMMG0unQXtccRS0RDCTtIla7OnxfqWLTFdNT\n5GswtG2+NIVrQ5JM04tZdL5gM2gZr+HK1CWMFKSZmQKBgQDvFQ91vSM4DqYG1C57\nhtrHUTj2GgahryefM4PRtI2VOhxrmbaHZr5v6iy01w5fm3djPjZO7V94E4wgXX41\nBedLvXzXODmz/Po35v/ILiMCRrtD2PdmQl3BD8nadNJPjt5hYJxg7aYnvfBSqaD7\nAzLabiSXYjLHJKXmNM6fzxszWwKBgQDR1OzcugXVL8rIiPPvhu6G23Jh/fBc+cu7\n6QOPSia02KXq/W7Pm5fP4UAlD7OJXwgVeP7W1ZF9+uJdZtbHSTawkt7Rrfj7orvg\nnKYGR86WNWynWkg/c9zN/l2DvJoFgjO7HfDgTgPb2+QDM6L6S172IBexNlA4t/AT\nieSO3ZCyGQKBgH01WF1e6lznPwgAgz9qBpWv8dbhFmwCoQt9HSHsHuHyBwRLAg6z\nPjS6PSOQJRTpBINTB3oaUo8+HXqtu/Tk3JcL65+C8KVUbW5tabNahjcg9922eQpy\n40rCjAH+gE3uEoSI5hzVGNljXcLM12Pd7vn6COvHH7SverqvGS8UdbhVAoGATYh3\n3Td/YD7Al0jDmgYprPr5UOwcHL7QYSbAgfnMQ5ap+CKdB2letxlsMkWS+Xd77TNA\nNvHDSOGjMxAE3K5Y3vXmD2RRU+nVsjEvx7JQy4ACHfRmLcwKErOiqkLORqrNop51\nmuw40Mx3fBdgaUvgUuGY34pKKisNMqsJISENjkECgYEAjs/sX63o0fmrhMC80XTY\nWbBhOFswN2M24HUNj25LWUX1mRb8KHYv4CjtzV0R9fCT5/qjBM39wabwd8C6LKHC\n5/QYqpJ0fCFSvLjSqdd3oT/V3dnsIWMYdg4vg+yDZiP1pAMO1F35Vq9LoWn4OW0+\nZSWH4KUI2Ps3KEN26VYvSkg=\n-----END PRIVATE KEY-----\n",
+  "client_email": "factory-fixture@factory-fixture-project.iam.gserviceaccount.com",
+  "client_id": "000000000000000000000",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/factory-fixture%40factory-fixture-project.iam.gserviceaccount.com"
+}

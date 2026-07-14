@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://factory-core/schemas/audit.schema.json",
+  "title": "Fleet Audit Report",
+  "description": "Output of ci-templates audit.yml + the P-12 audit-monthly skill (plan §4.5, §10 P-12, §11.3). Per-site PSI/GSC/Sentry snapshot plus recommended actions.",
+  "type": "object",
+  "required": ["generated_at", "sites"],
+  "additionalProperties": true,
+  "properties": {
+    "generated_at": { "type": "string", "format": "date-time" },
+    "sites": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["slug", "url", "psi", "gsc", "sentry_errors", "actions"],
+        "additionalProperties": true,
+        "properties": {
+          "slug": { "type": "string" },
+          "url": { "type": "string", "description": "Live production URL audited." },
+          "psi": {
+            "type": "object",
+            "description": "PageSpeed Insights category scores, 0-1 (plan §5 LHCI thresholds: perf>=0.90, others>=0.95).",
+            "properties": {
+              "performance": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+              "seo": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+              "accessibility": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+              "best_practices": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+              "strategy": { "type": "string", "enum": ["mobile", "desktop"] }
+            },
+            "additionalProperties": false
+          },
+          "gsc": {
+            "type": "object",
+            "required": ["indexed", "errors"],
+            "properties": {
+              "indexed": { "type": ["boolean", "null"], "description": "URL Inspection verdict for the homepage, null if not checked." },
+              "errors": { "type": "array", "items": { "type": "string" }, "description": "Index coverage error labels from GSC." }
+            },
+            "additionalProperties": false
+          },
+          "sentry_errors": { "type": ["integer", "null"], "minimum": 0, "description": "Error count for the audit window." },
+          "actions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Testable follow-up tasks (plan §10 P-12 acceptance criteria: 'actions are testable tasks')."
+          }
+        }
+      }
+    }
+  }
+}

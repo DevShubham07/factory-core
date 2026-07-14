@@ -1,0 +1,12 @@
+{
+  "_fixture": true,
+  "_note": "Canned PageSpeed Insights v5 runPagespeed response shape, trimmed to just the fields psi-audit.mjs reads (lighthouseResult.categories.*.score). Used by --fixture for G0 self-test without a real PSI_API_KEY or network call.",
+  "lighthouseResult": {
+    "categories": {
+      "performance": { "id": "performance", "title": "Performance", "score": 0.97 },
+      "seo": { "id": "seo", "title": "SEO", "score": 0.98 },
+      "accessibility": { "id": "accessibility", "title": "Accessibility", "score": 0.96 },
+      "best-practices": { "id": "best-practices", "title": "Best Practices", "score": 0.99 }
+    }
+  }
+}
