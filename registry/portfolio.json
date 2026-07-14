@@ -8,11 +8,30 @@
       "group": "A",
       "id": "A3",
       "build_order": 1,
-      "state": "IDEA",
+      "state": "SPECED",
       "cpm_tier": "medium",
       "rank_difficulty": "easiest rank",
       "notes": "SITE #1 — proves the full pipeline end-to-end (§15). Inputs: diagonal (in/cm), aspect ratio (16:9, 16:10, 21:9, 4:3, 32:9, custom W:H). Outputs: width/height (in+cm), area, PPI (optional resolution input), size-comparison table of common monitors. Pure math (w = d*cos(atan(h:w)) etc.). Edge cases: zero/negative input, absurd values (>200in warn), unit persistence in localStorage. MPA long-tail landing pages e.g. /27-inch-monitor-dimensions/.",
-      "backup_domains": []
+      "backup_domains": [],
+      "gates": [
+        {
+          "gate": "G1",
+          "passed_at": "2026-07-14",
+          "evidence": [
+            "research/monitorsizecalculator/g1-evidence.md",
+            "research/monitorsizecalculator/scorecard.json"
+          ]
+        },
+        {
+          "gate": "G2",
+          "passed_at": "2026-07-14",
+          "evidence": [
+            "operator approval message 2026-07-14",
+            "research/monitorsizecalculator/spec.md (BINDING)"
+          ]
+        }
+      ],
+      "main_keyword": "screen size calculator"
     },
     {
       "slug": "speechlengthcalculator",
@@ -64,7 +83,9 @@
       "cpm_tier": "medium-high",
       "rank_difficulty": "medium-high",
       "notes": "Select 2-3 phones -> to-scale side-by-side outlines (mm dimensions) + spec table (dimensions/weight/display). Dataset data/phones.json seeded with ~100 current phones; every entry carries source + retrieved fields (manufacturer spec pages) — AI must fetch real dimensions, never invent (design doc §7.2); HUMAN spot-checks 10 random entries. Landing pages per popular pair e.g. /iphone-16-vs-galaxy-s25-size/. Dataset discipline proven on this site per rollout roadmap (§15).",
-      "backup_domains": ["phonesizecomparison.com"]
+      "backup_domains": [
+        "phonesizecomparison.com"
+      ]
     },
     {
       "slug": "jsondiffchecker",

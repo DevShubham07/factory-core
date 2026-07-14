@@ -4,9 +4,10 @@
 > Every heading below is non-empty. "The spec doesn't say" ⇒ ask or amend
 > the spec — never improvise silently. Formulas and data carry citations.
 >
-> **STATUS: DRAFT** — becomes binding only after (a) Gate G1 fully closes
-> (two [HUMAN] artifacts pending: Ahrefs volume capture, D-11 Namecheap price
-> screenshot) and (b) [HUMAN] approval is recorded per Gate G2.
+> **STATUS: BINDING** — G1 passed 2026-07-14 (all five checks incl. Ahrefs volume
+> + D-11 price artifacts, see `g1-evidence.md`); G2 human approval recorded
+> 2026-07-14 ("i approve the spec plan"). §6 keyword map amended post-approval
+> per G1 data (main-keyword pivot, flagged to operator): see g1-evidence.md.
 >
 > **Identity** (from `site.config.mjs` — the template's single identity file,
 > rewritten by `automation/new-site.mjs` at P3; see ADR-0013): name **Monitor
@@ -209,7 +210,14 @@ Main keyword and the **15 supporting keywords** are taken verbatim from
 `research/monitorsizecalculator/keyword-research.json` (`main_keyword`,
 `supporting_keywords[]`). Each maps to a specific page.
 
-**Main:** `monitor size calculator` → **`/` (home)** — H1, `<title>`, primary copy.
+**Main (amended per G1 data, 2026-07-14 — see `g1-evidence.md`):**
+`screen size calculator` (Ahrefs >1000/mo US, verified) → **`/` (home)** — `<title>`
+and primary copy target BOTH phrases (e.g. title "Monitor Size Calculator — Screen
+Size Calculator (Width, Height, Area, PPI)"); H1 stays "Monitor Size Calculator"
+(site name/domain identity); body copy uses "screen size calculator" naturally.
+**Primary supporting:** `monitor size calculator` (>100/mo, exact-match domain) → `/` (home).
+The monitor-dimensions landing cluster below (KD **Easy** per Ahrefs) is the
+first-traffic wedge — unchanged.
 
 | # | Supporting keyword (G1 artifact) | Target page |
 |---|---|---|
