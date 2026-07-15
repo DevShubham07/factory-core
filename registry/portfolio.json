@@ -86,7 +86,7 @@
     "group": "A",
     "id": "A5",
     "build_order": 2,
-    "state": "SCAFFOLDED",
+    "state": "BUILT",
     "cpm_tier": "low",
     "rank_difficulty": "medium — easiest build",
     "notes": "Paste text OR word-count input -> speaking time at 100-180 WPM (slider + slow/avg/fast presets) + silent-reading time. Live word/char count. Edge cases: empty input, huge paste (cap 200k chars), unicode. Landing pages e.g. /how-many-words-is-a-5-minute-speech/.",
@@ -104,6 +104,15 @@
           "14/14 tests unmodified",
           "CI run 29414473046 success",
           "vercel 200+noindex"
+        ]
+      },
+      {
+        "gate": "G4",
+        "passed_at": "2026-07-15",
+        "evidence": [
+          "46/46 playwright (32 verbatim oracle pairs incl. NBSP hex-verified)",
+          "independent verifier PASS: 6 pairs hand-recomputed incl. both half-up ties + emoji code-point case",
+          "commits 12c5d0e bc9f667 f6e2660"
         ]
       }
     ],
