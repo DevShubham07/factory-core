@@ -6,7 +6,7 @@
     "group": "A",
     "id": "A3",
     "build_order": 1,
-    "state": "SEO_DONE",
+    "state": "DEPLOYED",
     "cpm_tier": "medium",
     "rank_difficulty": "easiest rank",
     "notes": "SITE #1 — proves the full pipeline end-to-end (§15). Inputs: diagonal (in/cm), aspect ratio (16:9, 16:10, 21:9, 4:3, 32:9, custom W:H). Outputs: width/height (in+cm), area, PPI (optional resolution input), size-comparison table of common monitors. Pure math (w = d*cos(atan(h:w)) etc.). Edge cases: zero/negative input, absurd values (>200in warn), unit persistence in localStorage. MPA long-tail landing pages e.g. /27-inch-monitor-dimensions/.",
@@ -62,6 +62,15 @@
           "gates verifier: all 12 checks PASS (titles/meta/canonical/OG/JSON-LD/600w/sitemap/robots/404)",
           "WebApplication schema home-only post-review",
           "home copy 828 words"
+        ]
+      },
+      {
+        "gate": "G7",
+        "passed_at": "2026-07-15",
+        "evidence": [
+          "prod live at site-monitorsizecalculator.vercel.app: 200 + X-Robots-Tag noindex",
+          "sitemap/robots live",
+          "Analytics dashboard-enable + Sentry deferred per G0 deviations"
         ]
       }
     ],
