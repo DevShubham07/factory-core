@@ -113,7 +113,7 @@ scraped data — §5).
 | `/1000-words-to-minutes/` | 1000 words to minutes | `prefillWords=1000`, mode `time-from-words` | time table, 1000 words × WPM 100–180 + silent 238 |
 | `/500-words-to-minutes/` | 500 words to minutes | `prefillWords=500`, mode `time-from-words` | time table, 500 words × WPM 100–180 + silent 238 |
 | `/average-speaking-rate-words-per-minute/` | average speaking rate words per minute | `prefillWpm=130` (info hub) | cited rate-context table (§4) + tool |
-| `/reading-time-calculator/` | reading time calculator | `prefillWpm=238` silent-emphasis | time table framed as reading time |
+| `/reading-time-calculator/` | reading time calculator | `prefillWpm=130` (reading emphasis is copy/layout-level: the fixed silent-238 output is visually foregrounded on this page) | reading-time table with PINNED rows: **250 / 750 / 1,500 / 2,500 / 4,000 / 6,000 words** × silent 238 + speaking band — deliberately disjoint from the `/1000-` and `/500-words-to-minutes/` tables (thin-content kill rule) |
 
 **Legal / system set (already exist in `site-template/src/pages/`; content
 filled, not re-created):** `/privacy`, `/terms`, `/about`, `/contact`, `/404`,
@@ -157,7 +157,8 @@ reused, via the shared `SpeechCalc.astro` partial, on landing pages.
 - **F-08 Preset comparison mini-panel.** A compact 4-row read-out showing the
   computed time at **Slow 110 / Average 130 / Fast 160** speaking + **Silent 238**
   simultaneously, so the user sees the full spread without moving the slider. All
-  four recompute live.
+  four recompute live. *(Grounding: beyond the A5 sketch — a synthesis of research
+  wedges #2+#3; explicitly submitted for G2 approval as an extension.)*
 - **F-09 Words-from-duration (inverse) mode.** A "I have a time limit" toggle
   switches the tool to **words-from-time**: given a target duration (minutes), it
   outputs the **words needed across WPM 100→180** as a table (§4 C4.3). This mode
@@ -166,10 +167,15 @@ reused, via the shared `SpeechCalc.astro` partial, on landing pages.
   code points**, the input is truncated to 200,000 and a **non-blocking** notice
   ("Text capped at 200,000 characters for performance") appears via `aria-live`;
   counts/times are computed on the capped text. No freeze, no crash.
-- **F-11 Empty / whitespace / zero handling.** Empty text, whitespace-only text,
-  or word-count input of 0/empty ⇒ **0 words**, **0 characters**, speaking &
-  reading times render **`0 sec`** (or an em-dash placeholder), and **no
-  `NaN`/`Infinity` is ever displayed**.
+- **F-11 Empty / whitespace / zero / invalid-numeric handling — ALL numeric
+  fields.** Empty text, whitespace-only text, or word-count input of 0/empty ⇒
+  **0 words**, **0 characters**, speaking & reading times render **`0 sec`**
+  (exactly — this string is the §10 oracle), and **no `NaN`/`Infinity` is ever
+  displayed**. Numeric fields (word count, target minutes): **negative values are
+  rejected** with an inline `aria-invalid` error ("Enter a positive number");
+  **decimal target minutes are accepted** (e.g. `7.5` ⇒ `W = round(R × 7.5)`);
+  target minutes `0`/empty ⇒ a 0-words table row set (no error); absurdly large
+  values compute normally (no cap on numerics; only text is capped, F-10).
 - **F-12 Unicode-aware counting.** Word splitting uses Unicode whitespace
   (`/\s+/u`, which includes NBSP `U+00A0`, `U+2028`, `U+3000`, etc.); character
   counting uses code points (astral chars such as emoji count as 1, not 2).
@@ -185,6 +191,8 @@ reused, via the shared `SpeechCalc.astro` partial, on landing pages.
   across reloads under a namespaced key (`slc:prefs`), read on init inside a
   `try/catch` (private-mode safe); absent/blocked storage falls back to defaults
   (Text mode, 130 WPM). **Pasted text is deliberately NOT persisted** (F-14).
+  *(Grounding: beyond the A5 sketch — site-1 F-10 persistence precedent applied;
+  explicitly submitted for G2 approval as an extension.)*
 - **F-16 Live word/char counters visible in Text mode** as instrument-style
   read-outs (`nums`), updating on each keystroke without layout shift.
 - **F-17 Mobile-first responsive single-page layout.** The whole tool + outputs +
@@ -193,7 +201,8 @@ reused, via the shared `SpeechCalc.astro` partial, on landing pages.
   v0.2.0 design utilities (§7): `glass` tool card, `nums` outputs, `btn-accent`
   primary action, `text-gradient` headline figure, tokenized focus rings.
 - **F-18 Prefill props for landing pages.** `SpeechCalc.astro` accepts
-  `prefillText?`, `prefillWords?`, `prefillWpm?` (default 130), `prefillMinutes?`,
+  `prefillText?`, `prefillWords?`, `prefillWpm?` (default 130; **clamped to the
+  F-04 slider bounds [100, 180]**), `prefillMinutes?`,
   and `mode?` (`"time-from-words"` | `"words-from-time"`). Duration pages pass
   `prefillMinutes` + `mode="words-from-time"`; word-count pages pass `prefillWords`
   + `mode="time-from-words"`. Props set initial state only; the tool is fully
@@ -216,9 +225,9 @@ time, and `R` = 238 for silent-reading time (C4.2).
 | Constant | Value | Basis (verified 2026-07-15) |
 |---|---|---|
 | **Silent reading** | **238 WPM** | **Brysbaert, M. (2019),** *"How many words do we read per minute? A review and meta-analysis of reading rate,"* **Journal of Memory and Language, vol. 109.** Meta-analysis of **190 studies / 18,573 participants**: mean silent reading = **238 wpm (non-fiction)**, 260 wpm (fiction). We use the non-fiction figure (conservative, general-purpose). This is a *published measured mean*, not an estimate. |
-| **Average speaking (default)** | **130 WPM** | Presentation-delivery pace. Verified band: **presentations run 100–150 wpm** and **conversation ≈150 wpm** per the **National Center for Voice and Speech (NCVS)**, cited by VirtualSpeech ("average conversation rate … about 150 wpm") and Baruch College TFCS. A *prepared speech is delivered slower than conversation* (speakers pause for emphasis), so 130 wpm — the mid-low of the 100–150 presentation band — is the defensible single "average," and matches the two strongest tool incumbents' "average" preset (wordstotime.com, timemywords.com both = 130). |
+| **Average speaking (default)** | **130 WPM** | Presentation-delivery pace. Verified band: **presentations run 100–150 wpm** and **conversation ≈150 wpm** per the **National Center for Voice and Speech (NCVS)**, cited by VirtualSpeech ("average conversation rate … about 150 wpm") and Baruch College TFCS. A *prepared speech is delivered slower than conversation* (speakers pause for emphasis), so 130 wpm — the mid-low of the 100–150 presentation band — is the defensible single "average," matching wordstotime.com's average preset (timemywords.com also offers 130 among its 100/130/160/180 preset set). |
 | **Slow speaking** | **110 WPM** | Deliberate/emphatic delivery — bottom of the presentation band (VirtualSpeech: presentations 100–150 wpm; Baruch's slower intelligible example ≈120 wpm). Matches the **speech-coaching** incumbent Debatrix's slow preset (110), the strongest-E-E-A-T tool in the SERP. |
-| **Fast speaking** | **160 WPM** | Brisk, energetic delivery — top of the conversational/audiobook band (VirtualSpeech: audiobooks/podcasts 150–160 wpm), below the analyzed **TED-talk average of 173 wpm**. Matches wordstotime.com / timemywords.com fast presets (both 160). |
+| **Fast speaking** | **160 WPM** | Brisk, energetic delivery — top of the conversational/audiobook band (VirtualSpeech: audiobooks/podcasts 150–160 wpm), below the **≈173 wpm average of VirtualSpeech's analysis of five popular TED talks (range 154–201)**. Matches wordstotime.com's fast preset (timemywords.com also offers 160 among its presets). |
 
 **Honesty note (§7.1.3):** the *ranges* above are cited and verified; the three
 **specific preset picks (110/130/160) are a reasoned selection within those cited
@@ -277,7 +286,7 @@ Given `minutes = W / R`:
 **Rate-context table (for `/average-speaking-rate-words-per-minute/`)** — all
 figures cited to NCVS / VirtualSpeech / Baruch TFCS / Brysbaert 2019 as above:
 conversation ≈150 wpm; presentation 100–150 wpm; audiobook/podcast 150–160 wpm;
-TED-talk average ≈173 wpm; silent reading 238 wpm (non-fiction). Presented as
+≈173 wpm avg of VirtualSpeech's five analyzed popular TED talks (range 154–201); silent reading 238 wpm (non-fiction). Presented as
 context, with the tool's presets mapped onto it.
 
 ## 5. Dataset schema
@@ -326,19 +335,22 @@ speaking time" naturally.
 | 8 | how many words is a 5 minute speech | `/how-many-words-is-a-5-minute-speech/` + home FAQ Q1 |
 | 9 | how many words is a 10 minute speech | `/how-many-words-is-a-10-minute-speech/` + FAQ Q3 |
 | 10 | how many words is a 3 minute speech | `/how-many-words-is-a-3-minute-speech/` + FAQ Q4 |
-| 11 | how many words is a 2 minute speech | `/how-many-words-is-a-2-minute-speech/` |
+| 11 | how many words is a 2 minute speech † | `/how-many-words-is-a-2-minute-speech/` |
 | 12 | 1000 words to minutes / how long to read 1000 words | `/1000-words-to-minutes/` + FAQ Q7 |
-| 13 | 500 words to minutes | `/500-words-to-minutes/` |
+| 13 | 500 words to minutes † | `/500-words-to-minutes/` |
 | 14 | reading time calculator | `/reading-time-calculator/` |
 | 15 | how many pages is a 5 minute speech | home FAQ Q2 (textual; pages depend on formatting — noted as estimate) |
 | 16 | script timer / words to minutes for video scripts | `/average-speaking-rate-words-per-minute/` audience note + FAQ Q11. **No dedicated per-audience page in v1** (§9). |
+
+† Rows 11 and 13 are sourced from the G1 artifact's `landing_pages[]` array
+(not `supporting_keywords[]`, which the intro cites for the other rows).
 
 **Per-page `<Seo>` intent** (P5/P6 fills exact strings; ≤60-char title, ≤160-char
 description, each containing its target keyword; canonical absolute from
 `Astro.site`).
 
-**FAQ content (home) — the 12 questions verbatim from `keyword-research.json` →
-`questions[]`.** FAQ is **visible content only**, no `FAQPage` JSON-LD (design-doc
+**FAQ content (home) — the 12 questions adapted (hyphenation/case normalized)
+from `keyword-research.json` → `questions[]`.** FAQ is **visible content only**, no `FAQPage` JSON-LD (design-doc
 D-10). Where marked **[from tool math]**, the numeric answer MUST be produced by
 §4 formulas (and therefore agrees with §10), never asserted from memory:
 
@@ -370,7 +382,7 @@ D-10). Where marked **[from tool math]**, the numeric answer MUST be produced by
 11. *What is an average speaking rate for audiobook narration?* → 150–160 wpm
     (VirtualSpeech); note it differs from live-speech pacing.
 12. *Is 160 words per minute too fast for a speech?* → 160 is our "fast" preset —
-    brisk but intelligible (below the 173 wpm TED average); recommend slowing for
+    brisk but intelligible (below the ≈173 wpm average of five analyzed popular TED talks); recommend slowing for
     complex material. Point to the slider.
 
 ## 7. Island/hydration plan
@@ -537,6 +549,12 @@ TRIPLE-CHECKED by hand** (the G4 test oracle; §7.3). Arithmetic shown in a
 - [ ] Text mode, input `""` → 0 words, 0 chars, speaking **`0 sec`**, silent **`0 sec`** (no `NaN`)
 - [ ] Text mode, input `"     "` (spaces only) → **0 words** (trim ⇒ 0)
 - [ ] Word-count mode, value `0` or empty → **0 words**, times **`0 sec`**, no `Infinity`/`NaN` displayed
+
+**F-11 — Numeric-field validation (all numeric inputs; added per G2 review D-2)**
+- [ ] Word-count mode, value `-250` → rejected: inline error **"Enter a positive number"**, `aria-invalid="true"`, no output change
+- [ ] Words-from-time mode, minutes `-5` → rejected: same error string + `aria-invalid`, table unchanged
+- [ ] Words-from-time mode, minutes `7.5` @ slider 130 → **975 words** <!-- W = round(130 × 7.5) = round(975.0) = 975 -->
+- [ ] Words-from-time mode, minutes `0` → 0-words rows across the table, **no error** (valid degenerate case)
 
 **F-13 — Live recalculation**
 - [ ] paste changing word count 650→1000 @130 → speaking time updates `5 min 0 sec`→`7 min 42 sec`, no submit/reload
