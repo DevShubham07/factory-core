@@ -1,0 +1,156 @@
+{
+  "serp": [
+    {
+      "position": 1,
+      "url": "https://wordstotime.com/",
+      "title": "Convert Words to Time - Talk Time Calculator",
+      "type": "dedicated-tool",
+      "quality_notes": "Ranked #1 in the observed SERPs for 'words to minutes', 'speech time calculator', 'words to minutes converter' AND 'reading time calculator' - the strongest cross-query incumbent. Fetched: accepts manual word count OR pasted text, toggles Reading Aloud vs Silent Reading, but offers only three fixed presets (Slow 100 / Average 130 / Fast 160 wpm) - no slider, no custom WPM. Output is a single min:sec figure. Carries a prominent sponsored/affiliate block (Wispr Flow dictation app). Brief intro copy, a 500-5000-word common-conversions table, no FAQ, no per-duration landing pages."
+    },
+    {
+      "position": 2,
+      "url": "http://www.speechinminutes.com/",
+      "title": "Convert Words to Minutes - Speech Calculator (Free)",
+      "type": "dedicated-tool",
+      "quality_notes": "Ranked top-2/top-3 across 'words to minutes', 'words to minutes converter' and 'speech time calculator' observed SERPs. Direct WebFetch on 2026-07-15 failed with 'certificate has expired' - the #2 incumbent for the head term is serving an expired TLS certificate, indicating a neglected, unmaintained site (same broken-HTTPS pattern as site #1's top incumbent screen-size.info)."
+    },
+    {
+      "position": 3,
+      "url": "https://www.timemywords.com/",
+      "title": "TimeMyWords - Free Speech Time Calculator",
+      "type": "dedicated-tool",
+      "quality_notes": "Fetched: the most polished dedicated incumbent - modern clean UI with light/dark toggle, four fixed presets (100/130/160/180 wpm) each labeled with a use case, conversion table 100-5,000 words across all four tiers, usage guide, FAQ, Chinese-language support. Gaps: no slider or custom WPM input, no character count, no silent-reading time, practice/immersive modes advertised but thin, related tools listed as 'Coming Soon'. No per-duration landing pages observed."
+    },
+    {
+      "position": 4,
+      "url": "https://tools.essayreply.com/words-to-minutes",
+      "title": "Words to Minutes Converter - EssayReply Tools",
+      "type": "multi-tool-portal",
+      "quality_notes": "Free-tool subdomain of an essay-writing AI service; the converter exists as lead-gen for the parent product. Multiple essay-industry brands (PapersOwl, EssayShark, Peachy Essay) run near-identical converters, confirming the keyword has commercial lead-gen value, but each is a template page inside a portal, not a destination tool."
+    },
+    {
+      "position": 5,
+      "url": "https://copywritely.com/words-to-minutes/",
+      "title": "Words To Minutes Calculator: Convert Word Count to Minutes of Speech",
+      "type": "multi-tool-portal",
+      "quality_notes": "Tool page inside an SEO-content SaaS's free-tools section. Ranks top-5 for both 'words to minutes' and 'words to minutes converter' in observed SERPs. Generic converter with explanatory copy; the page's job is funneling users to the paid content-checker product, not serving speakers."
+    },
+    {
+      "position": 6,
+      "url": "https://www.voices.com/tools/words_to_time_conversion",
+      "title": "Words to Time Conversion Calculator | Voices",
+      "type": "other",
+      "quality_notes": "Free tool page on the large Voices.com voice-over marketplace - the highest-authority domain in the observed top-10. Oriented to voice actors timing scripts (cites ~150 wpm conversational rate). Rides marketplace domain authority rather than tool depth; a utility page supporting the marketplace, not a speech-prep destination."
+    },
+    {
+      "position": 7,
+      "url": "https://bigvu.tv/tools/words-to-minutes/",
+      "title": "Words to Minutes | Estimate Script Length Fast | BIGVU",
+      "type": "thin-page",
+      "quality_notes": "Free-tool page on a teleprompter/video-creation SaaS, framed around script length for video creators. Lead-gen utility for the BIGVU app; from snippet a basic converter with marketing copy, limited depth discernible."
+    },
+    {
+      "position": 8,
+      "url": "https://podcastify.io/tools/speech-to-time-calculator",
+      "title": "Words to Minutes Calculator - Speech Time Converter | Podcastify",
+      "type": "thin-page",
+      "quality_notes": "Free-tool page on a podcast SaaS; another lead-gen converter targeting the same keyword with a podcast framing. Template tool-page pattern, limited depth discernible from snippet."
+    },
+    {
+      "position": 9,
+      "url": "https://debatrix.com/en/speech-calculator/",
+      "title": "Speech calculator: how long does your speech take? - Debatrix International",
+      "type": "other",
+      "quality_notes": "Fetched: speech-coaching agency's calculator page - ranked #1 in the observed 'speech length calculator' SERP and top-2 for 'speech time calculator'. Paste-text input with in-browser privacy note, three presets only (Slow 110 / Average 140 / Fast 170 wpm), no custom WPM, no reading time, no character count. Substantial FAQ (words for 3- and 5-minute speeches, choosing a speed). Exists as a gateway to Debatrix's coaching services; strong E-E-A-T framing ('used by professional speechwriters') but frozen feature set."
+    },
+    {
+      "position": 10,
+      "url": "https://learn.virtualspeech.com/tools/convert-words-to-time/",
+      "title": "Convert Words to Time - Calculate the Length of your Speech",
+      "type": "multi-tool-portal",
+      "quality_notes": "Free-tool page in the learn/tools section of VirtualSpeech (VR soft-skills training company). Appears in observed SERPs for 'words to minutes', 'speech length calculator' and '1000 words to minutes'. Parent site also owns the top-ranked editorial page for 'average speaking rate'. Tool itself is a basic converter supporting the courses business."
+    }
+  ],
+  "competition_score": 2,
+  "competition_rationale": "Torn between 3 (dedicated but weak incumbents) and 2, so per the conservative rule I score 2. Evidence for weakness: the #2 incumbent for the head term (speechinminutes.com) is serving an EXPIRED TLS certificate (WebFetch 2026-07-15) - actively decaying; the #1 (wordstotime.com) has no custom WPM, no FAQ, and monetizes with a prominent affiliate block; positions 4, 5, 7, 8 are template lead-gen tool pages inside essay/SEO/video/podcast SaaS portals serving their parent product, not searchers; no incumbent in the observed top-10 combines paste-text AND word-count input, a 100-180 WPM slider PLUS presets, speaking AND silent-reading time, live word/char count, and per-duration landing pages on one page - the planned tool's exact feature set. No entrenched regex101-class branded incumbent exists (the 0-bucket clearly fails), and no forums/gov pages appear in the top-10 (the 5-bucket clearly fails). Evidence against a clean 3: the SERP is CROWDED with functional-if-imperfect dedicated tools - timemywords.com (position 3) is modern with FAQ, tables and dark mode; speechtimecalculator.com (top-5 for 'speech time calculator') is modern, research-cited, with a WPM slider and char counts; voices.com holds a high-authority slot; and the niche is being actively farmed in 2026 (wordstominutes.com and howlongismyspeech.com both registered mid-2026 per the portfolio RDAP sweep; speakingtimecalculator exists as BOTH .com and .org; three wordstotime domain variants observed: .com, .app, .netlify.app). Crowding by adequate new entrants makes differentiation harder than the 'weak/ugly incumbents' bucket implies, even though each individual incumbent is beatable. Net: winnable SERP with visibly weak positions 1, 2, 4, 5, 7, 8, but high entrant churn and two genuinely competent young incumbents cap the conservative score at 2 (rubric-literal second pass per P-01: 3 - both passes recorded in research-notes.md)."
+  ,
+  "competitors": [
+    {
+      "url": "https://wordstotime.com/",
+      "strengths": [
+        "Ranks #1 in observed SERPs for four separate cluster queries (words to minutes, speech time calculator, words to minutes converter, reading time calculator) - the de-facto category leader",
+        "Dual-mode output: Reading Aloud vs Silent Reading toggle - one of only two observed incumbents covering both intents",
+        "Accepts either a manual word count or pasted text (both input modes)",
+        "Practical 500-5,000-word common-conversions table giving instant reference answers"
+      ],
+      "weaknesses": [
+        "Only three fixed speed presets (100/130/160 wpm) - no slider, no custom WPM entry",
+        "No FAQ and only brief explanatory copy - weak long-tail/question coverage",
+        "Prominent sponsored affiliate block (Wispr Flow) degrades trust and UX above the fold",
+        "No per-duration landing pages (how-many-words-is-a-5-minute-speech class queries left to blogs)",
+        "No character count and no live-updating counters highlighted"
+      ]
+    },
+    {
+      "url": "https://www.timemywords.com/",
+      "strengths": [
+        "Most modern design among incumbents: clean layout, light/dark theme toggle, clear hierarchy, no ads detected",
+        "Four labeled speed presets (100/130/160/180 wpm) mapped to concrete use cases (formal presentation, business, casual, conversational)",
+        "Deep supporting content: usage guide with pro tips, comprehensive FAQ, 100-5,000-word conversion table across all four speed tiers",
+        "Common speech-length reference figures (elevator pitch, toast, keynote) matching real user scenarios"
+      ],
+      "weaknesses": [
+        "No slider or custom WPM input despite four presets",
+        "No character count output and no silent-reading time",
+        "Advertised extras are vapor: 'Practice & Measure' and related tools flagged 'Coming Soon'",
+        "No per-duration landing pages observed - single-page site",
+        "Young site with no evident brand moat beyond its head-term ranking"
+      ]
+    },
+    {
+      "url": "https://www.speechtimecalculator.com/en",
+      "strengths": [
+        "Functionally deepest incumbent observed: WPM slider (default 183 wpm, research-based) plus slow/fast reference points - the only observed tool with a slider",
+        "Shows speech time AND silent reading time (fixed 238 wpm) side by side, plus word count, character counts and byte counts with/without spaces",
+        "Cites actual research (Brysbaert 2019 reading-rate studies) and shows formulas - strong accuracy E-E-A-T",
+        "Bilingual (EN/DE), basic/advanced mode toggle, popular-durations reference table, no ads detected"
+      ],
+      "weaknesses": [
+        "Silent reading speed locked at 238 wpm - not adjustable",
+        "No FAQ section despite complex functionality",
+        "No per-duration landing pages (single tool page + blog-style dating)",
+        "Exact-match only for 'speech time calculator'; does not target the higher-volume 'words to minutes' phrasing on-page",
+        "No save/export/share features"
+      ]
+    },
+    {
+      "url": "https://debatrix.com/en/speech-calculator/",
+      "strengths": [
+        "Ranked #1 in the observed 'speech length calculator' SERP and top-2 for 'speech time calculator' - strongest ranking for the planned domain's exact-match term",
+        "Credible professional framing: speech-coaching agency, 'used by professional speechwriters', in-browser privacy promise (text not stored)",
+        "Solid FAQ answering the per-duration questions (words in a 3-minute / 5-minute speech) and speed-selection guidance"
+      ],
+      "weaknesses": [
+        "Three fixed presets only (110/140/170 wpm) - no custom WPM, no slider",
+        "No silent-reading time, no character count, no conversion tables",
+        "The page is lead-gen for coaching services, so the tool's feature set is frozen - no incentive to deepen it",
+        "No per-duration landing pages; long-tail queries answered only inside FAQ text"
+      ]
+    },
+    {
+      "url": "https://howlongismyspeech.com/",
+      "strengths": [
+        "Only observed incumbent with speed calibration: time yourself reading a sample paragraph, then 'Use my speed' sets a personal WPM - a genuinely differentiated feature",
+        "Live word count AND character count while typing/pasting",
+        "Exact-match domain for a question-form cluster query, registered mid-2026 - evidence the niche is being actively farmed right now"
+      ],
+      "weaknesses": [
+        "Minimal explanatory content: one short section on speaking rates, no FAQ, no tables, no per-duration pages",
+        "Single preset default (~140 wpm) unless the user runs calibration - no quick slow/average/fast presets",
+        "No silent-reading time output",
+        "Monetized with an off-topic Hostinger affiliate link and a donation prompt - no sustainable content strategy visible",
+        "Thin single-page site; beatable on content depth and page cluster"
+      ]
+    }
+  ]
+}

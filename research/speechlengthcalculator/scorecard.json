@@ -1,0 +1,97 @@
+{
+  "keyword": "words to minutes",
+  "domain": "speechlengthcalculator.com",
+  "C": 3,
+  "D": 3,
+  "M": 2,
+  "B": 5,
+  "R": 4,
+  "total": 22.5,
+  "volume": {
+    "value": null,
+    "source": "[ESTIMATE] words to minutes 10k-25k US/mo — derived from 15+ observed purpose-built competitor pages incl. essay-industry lead-gen tools. PENDING: Ahrefs capture [HUMAN], batched with bulk domain session.",
+    "estimate": true
+  },
+  "serp": [
+    {
+      "position": 1,
+      "url": "https://wordstotime.com/",
+      "type": "dedicated_tool",
+      "notes": "Convert Words to Time - Talk Time Calculator — Ranked #1 in the observed SERPs for 'words to minutes', 'speech time calculator', 'words to minutes converter' AND 'reading time calculator' - the strongest cross-query incumbent. Fetched: accepts manual word count OR pasted text, toggles Reading Aloud vs Silent Reading, but offers only three fixed presets (Slow 100 / Average 130 / Fast 160 wpm) - no slider, no custom WPM. Output is a single min:sec figure. Carries a prominent sponsored/affiliate block (Wispr Flow dictation app). Brief intro copy, a 500-5000-word common-conversions table, no FAQ, no per-duration landing pages."
+    },
+    {
+      "position": 2,
+      "url": "http://www.speechinminutes.com/",
+      "type": "dedicated_tool",
+      "notes": "Convert Words to Minutes - Speech Calculator (Free) — Ranked top-2/top-3 across 'words to minutes', 'words to minutes converter' and 'speech time calculator' observed SERPs. Direct WebFetch on 2026-07-15 failed with 'certificate has expired' - the #2 incumbent for the head term is serving an expired TLS certificate, indicating a neglected, unmaintained site (same broken-HTTPS pattern as site #1's top incumbent screen-size.info)."
+    },
+    {
+      "position": 3,
+      "url": "https://www.timemywords.com/",
+      "type": "dedicated_tool",
+      "notes": "TimeMyWords - Free Speech Time Calculator — Fetched: the most polished dedicated incumbent - modern clean UI with light/dark toggle, four fixed presets (100/130/160/180 wpm) each labeled with a use case, conversion table 100-5,000 words across all four tiers, usage guide, FAQ, Chinese-language support. Gaps: no slider or custom WPM input, no character count, no silent-reading time, practice/immersive modes advertised but thin, related tools listed as 'Coming Soon'. No per-duration landing pages observed."
+    },
+    {
+      "position": 4,
+      "url": "https://tools.essayreply.com/words-to-minutes",
+      "type": "multi_tool_portal",
+      "notes": "Words to Minutes Converter - EssayReply Tools — Free-tool subdomain of an essay-writing AI service; the converter exists as lead-gen for the parent product. Multiple essay-industry brands (PapersOwl, EssayShark, Peachy Essay) run near-identical converters, confirming the keyword has commercial lead-gen value, but each is a template page inside a portal, not a destination tool."
+    },
+    {
+      "position": 5,
+      "url": "https://copywritely.com/words-to-minutes/",
+      "type": "multi_tool_portal",
+      "notes": "Words To Minutes Calculator: Convert Word Count to Minutes of Speech — Tool page inside an SEO-content SaaS's free-tools section. Ranks top-5 for both 'words to minutes' and 'words to minutes converter' in observed SERPs. Generic converter with explanatory copy; the page's job is funneling users to the paid content-checker product, not serving speakers."
+    },
+    {
+      "position": 6,
+      "url": "https://www.voices.com/tools/words_to_time_conversion",
+      "type": "other",
+      "notes": "Words to Time Conversion Calculator | Voices — Free tool page on the large Voices.com voice-over marketplace - the highest-authority domain in the observed top-10. Oriented to voice actors timing scripts (cites ~150 wpm conversational rate). Rides marketplace domain authority rather than tool depth; a utility page supporting the marketplace, not a speech-prep destination."
+    },
+    {
+      "position": 7,
+      "url": "https://bigvu.tv/tools/words-to-minutes/",
+      "type": "thin_page",
+      "notes": "Words to Minutes | Estimate Script Length Fast | BIGVU — Free-tool page on a teleprompter/video-creation SaaS, framed around script length for video creators. Lead-gen utility for the BIGVU app; from snippet a basic converter with marketing copy, limited depth discernible."
+    },
+    {
+      "position": 8,
+      "url": "https://podcastify.io/tools/speech-to-time-calculator",
+      "type": "thin_page",
+      "notes": "Words to Minutes Calculator - Speech Time Converter | Podcastify — Free-tool page on a podcast SaaS; another lead-gen converter targeting the same keyword with a podcast framing. Template tool-page pattern, limited depth discernible from snippet."
+    },
+    {
+      "position": 9,
+      "url": "https://debatrix.com/en/speech-calculator/",
+      "type": "other",
+      "notes": "Speech calculator: how long does your speech take? - Debatrix International — Fetched: speech-coaching agency's calculator page - ranked #1 in the observed 'speech length calculator' SERP and top-2 for 'speech time calculator'. Paste-text input with in-browser privacy note, three presets only (Slow 110 / Average 140 / Fast 170 wpm), no custom WPM, no reading time, no character count. Substantial FAQ (words for 3- and 5-minute speeches, choosing a speed). Exists as a gateway to Debatrix's coaching services; strong E-E-A-T framing ('used by professional speechwriters') but frozen feature set."
+    },
+    {
+      "position": 10,
+      "url": "https://learn.virtualspeech.com/tools/convert-words-to-time/",
+      "type": "multi_tool_portal",
+      "notes": "Convert Words to Time - Calculate the Length of your Speech — Free-tool page in the learn/tools section of VirtualSpeech (VR soft-skills training company). Appears in observed SERPs for 'words to minutes', 'speech length calculator' and '1000 words to minutes'. Parent site also owns the top-ranked editorial page for 'average speaking rate'. Tool itself is a basic converter supporting the courses business."
+    }
+  ],
+  "decision": "build",
+  "estimates": [
+    "main keyword volume 10k-25k US/mo [ESTIMATE] — no keyword-tool artifact yet",
+    "all supporting-keyword volumes in keyword-research.json are [ESTIMATE]"
+  ],
+  "scoring_notes": {
+    "C": "TWO-PASS per P-01 rule (site-1 precedent): conservative pass 2, rubric-literal pass 3 (capped). Evidence for 3: #2 head-term incumbent speechinminutes.com serves an EXPIRED TLS cert (fetched 2026-07-15); #1 wordstotime.com has no custom WPM, no FAQ, affiliate clutter; 4/10 slots are SaaS lead-gen template pages. Counterweight capping at 3: two competent young incumbents (timemywords, speechtimecalculator) and active 2026 domain-farming in the niche.",
+    "D": "3 — keyword+modifier for head term words to minutes (wordstominutes.com TAKEN); exact match only for lower-volume speech length calculator. RDAP-404 re-verified 2026-07-15. D-11 price check PENDING [HUMAN, bulk session].",
+    "M": "2 — education/writing-tools CPM tier lower than electronics; student-heavy audience.",
+    "B": "5 — pure client-side text math (word count / WPM), no dataset.",
+    "R": "4 — no YMYL; -1 thin-content risk on per-duration pages requires genuinely distinct computed content per page."
+  },
+  "gate_g1": {
+    "volume_artifact": "PENDING [HUMAN] — Ahrefs capture, batched with bulk domain purchase session",
+    "C_at_least_3": true,
+    "rdap_same_day": "2026-07-15 404 AVAILABLE (research agent)",
+    "price_under_1200": "PENDING [HUMAN] — Namecheap screenshot (D-11), batched",
+    "total_at_least_22": true,
+    "note": "MARGINAL: 22.5 vs threshold 22. Parks at 20.5 if conservative C=2 stands — flagged for operator at spec approval."
+  }
+}

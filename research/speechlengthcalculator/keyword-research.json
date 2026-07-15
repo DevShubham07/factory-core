@@ -1,0 +1,135 @@
+{
+  "main_keyword": {
+    "keyword": "words to minutes",
+    "volume_estimate": "10k-25k US/mo [ESTIMATE]; full cluster (words to minutes + speech/speaking time calculator variants + per-duration questions) 30k-60k US/mo [ESTIMATE]",
+    "volume_source": "No keyword-tool data was capturable in this pass (Ahrefs capture is a [HUMAN] G1 step). Derived from public signals observed via WebSearch 2026-07-15: (1) 15+ purpose-built pages compete for the exact phrase, including paid-acquisition-driven brands that only build lead-gen tools for keywords with meaningful volume - essay services (EssayReply, EssayShark, PapersOwl, Peachy Essay, Copywritely), SaaS products (BIGVU, Podcastify, VirtualSpeech, Speechify), and the Voices.com marketplace; (2) the niche is being farmed in real time - wordstominutes.com and howlongismyspeech.com were both registered mid-2026 (portfolio RDAP sweep 2026-07-14), speakingtimecalculator exists as both .com and .org, and three wordstotime domain variants are live (.com, .app, .netlify.app); (3) per-duration question content has been continuously maintained since at least 2016 (wordcounter.net's 10-minute-speech post) and two sites run programmatic per-duration series (capitalizemytitle.com/speech-length/N-minutes/, speakflow.com/how-many-words-in-N-minutes); (4) 'words to minutes' returned the densest tool-only SERP of the five head queries tested, indicating it is the highest-volume phrasing of the cluster."
+  },
+  "supporting_keywords": [
+    {
+      "keyword": "speech time calculator",
+      "intent": "tool",
+      "volume_estimate": "low thousands US/mo [ESTIMATE] - exact-match domain speechtimecalculator.com holds a top-5 slot with a bilingual research-cited tool; gorby.app, textconverter.io and speechify.com all maintain dedicated pages"
+    },
+    {
+      "keyword": "words to time",
+      "intent": "tool",
+      "volume_estimate": "low thousands US/mo [ESTIMATE] - wordstotime.com ranks #1 across four cluster queries; copycat domains wordstotime.app and wordstotime.netlify.app observed, plus voices.com's words_to_time tool page"
+    },
+    {
+      "keyword": "speaking time calculator",
+      "intent": "tool",
+      "volume_estimate": "not directly observable; strong demand signal: BOTH speakingtimecalculator.com and speakingtimecalculator.org exist as separate live exact-match tools, plus speechify.com/speaking-time-calculator"
+    },
+    {
+      "keyword": "speech length calculator",
+      "intent": "tool",
+      "volume_estimate": "hundreds-to-low-thousands US/mo [ESTIMATE] - calculator.academy built an exact-match page, howlongismyspeech.com (registered mid-2026) titles itself 'Speech Length Calculator', wordstotime.netlify.app targets it with a sub-page; this is the planned domain's exact-match term"
+    },
+    {
+      "keyword": "words to minutes converter",
+      "intent": "tool",
+      "volume_estimate": "low thousands US/mo [ESTIMATE] - four essay-industry brands (EssayReply, Peachy Essay, EssayShark, PapersOwl) each run an exact-match converter page as lead-gen"
+    },
+    {
+      "keyword": "how many words is a 5 minute speech",
+      "intent": "informational (question)",
+      "volume_estimate": "strongest per-duration query observed: dedicated answers on wordcounter.io, SEEK career advice, crazygoodtalks.com, Indeed career advice, Quora, lonestarsalesperformance.com all rank; every fetched competitor FAQ answers it"
+    },
+    {
+      "keyword": "how many words is a 10 minute speech",
+      "intent": "informational (question)",
+      "volume_estimate": "wordcounter.net has maintained a dedicated post since 2016; slidelya.com, speakflow.com/how-many-words-in-10-minutes, wonderslide.com (slides angle) and Quora all rank - durable demand"
+    },
+    {
+      "keyword": "how many words is a 3 minute speech",
+      "intent": "informational (question)",
+      "volume_estimate": "capitalizemytitle.com runs a programmatic /speech-length/3-minutes/ page (series covers other durations), Quora thread ranks, Debatrix FAQ answers it - validates a per-duration page series"
+    },
+    {
+      "keyword": "words per minute speech / average speaking rate",
+      "intent": "informational",
+      "volume_estimate": "high within cluster [ESTIMATE] - virtualspeech.com's editorial page ranks #1, backed by prezent.ai, thespeakerlab.com, baruch.cuny.edu (edu), Wikipedia 'Speech tempo'; NCVS ~150 wpm figure is the canonical citation"
+    },
+    {
+      "keyword": "reading time calculator",
+      "intent": "tool (adjacent cluster)",
+      "volume_estimate": "10k+ US/mo [ESTIMATE] - separate crowded SERP (thereadtime.com, readtime.io, niram.org Read-o-Meter, Omni Calculator, Elementor); wordstotime.com ranks here too via its silent-reading mode, proving one tool can span both intents"
+    },
+    {
+      "keyword": "1000 words to minutes / how long does it take to read 1000 words",
+      "intent": "informational (question)",
+      "volume_estimate": "per-word-count demand confirmed: bookscalculator.com/words/1000, capitalizemytitle.com/reading-time/1000-words/, usefoyer.com/how-long-to-read/1000/words and wordtotime.org blog all run dedicated per-count pages"
+    },
+    {
+      "keyword": "words per minute calculator",
+      "intent": "tool",
+      "volume_estimate": "Omni Calculator maintains a standalone words-per-minute page (their build threshold implies volume) and speakingtimecalculator.org runs a /words-per-minute-speech sub-page"
+    },
+    {
+      "keyword": "how many pages is a 5 minute speech",
+      "intent": "informational (question)",
+      "volume_estimate": "Quora thread ranks #1 for the 5-minute head query phrasing 'how long is a 5 minute speech'; crazygoodtalks.com dedicates a page to the pages-count angle (2-2.5 double-spaced pages)"
+    },
+    {
+      "keyword": "script timer / words to minutes for video scripts",
+      "intent": "tool (audience variant)",
+      "volume_estimate": "not directly observable; BIGVU ('Estimate Script Length'), Podcastify and Voices.com all frame the same converter for video/podcast/voice-over scripts - a distinct audience worth one landing page"
+    }
+  ],
+  "questions": [
+    "How many words is a 5 minute speech?",
+    "How many pages should my 5-minute speech be?",
+    "How many words do I need for a ten minute speech?",
+    "How many words are in a 3-minute speech?",
+    "How many words per minute in a speech?",
+    "What is the ideal rate of speech (WPM) for a presentation?",
+    "How long does it take to read 1000 words (silently vs aloud)?",
+    "How many words can you say in 10 minutes?",
+    "How many slides do you need for a 10-minute presentation?",
+    "How long does it take to WRITE a 5-minute speech?",
+    "What is an average speaking rate for audiobook narration?",
+    "Is 160 words per minute too fast for a speech?"
+  ],
+  "landing_pages": [
+    {
+      "path": "/how-many-words-is-a-5-minute-speech/",
+      "target_keyword": "how many words is a 5 minute speech",
+      "rationale": "Highest-evidence duration query: six+ dedicated ranking pages observed (wordcounter.io, SEEK, Indeed, crazygoodtalks, Quora, lonestar) and every fetched competitor answers it in FAQ text only - no incumbent pairs the answer with a live calculator on an exact-match URL."
+    },
+    {
+      "path": "/how-many-words-is-a-10-minute-speech/",
+      "target_keyword": "how many words is a 10 minute speech",
+      "rationale": "wordcounter.net has held this query with a blog post since 2016; speakflow and slidelya built dedicated pages - durable, contested-by-blogs-only demand that a tool page can win."
+    },
+    {
+      "path": "/how-many-words-is-a-3-minute-speech/",
+      "target_keyword": "how many words is a 3 minute speech",
+      "rationale": "capitalizemytitle runs a programmatic per-duration series including 3 minutes; Quora ranks - weak content classes, easy win, and 3 minutes is the classic toast/elevator-pitch length."
+    },
+    {
+      "path": "/how-many-words-is-a-2-minute-speech/",
+      "target_keyword": "how many words is a 2 minute speech",
+      "rationale": "Completes the short-duration series (2/3/5/10) that capitalizemytitle and speakflow both template across durations; per-duration pages are near-free once the 5-minute template exists. Demand for this specific duration inferred from the incumbents' series structure [ESTIMATE - verify in Ahrefs at G1]."
+    },
+    {
+      "path": "/1000-words-to-minutes/",
+      "target_keyword": "1000 words to minutes",
+      "rationale": "Per-word-count mirror of the duration series: bookscalculator, capitalizemytitle, usefoyer and wordtotime.org all run dedicated 1000-word pages covering both spoken and silent reading time - our tool computes both natively."
+    },
+    {
+      "path": "/500-words-to-minutes/",
+      "target_keyword": "500 words to minutes",
+      "rationale": "500 words is the first row of wordstotime.com's common-conversions table and the canonical example in observed converter copy ('500 words = about 3 min 20 s at 150 wpm') - highest-frequency word-count anchor after 1000."
+    },
+    {
+      "path": "/average-speaking-rate-words-per-minute/",
+      "target_keyword": "average speaking rate words per minute",
+      "rationale": "The cluster's informational hub: virtualspeech's editorial page ranks #1 and funnels into their converter tool - replicate the pattern; page also hosts the NCVS 150 wpm citation and context table (conversation/presentation/audiobook rates) that the calculator's presets link to."
+    },
+    {
+      "path": "/reading-time-calculator/",
+      "target_keyword": "reading time calculator",
+      "rationale": "Adjacent 10k+ [ESTIMATE] cluster with its own crowded SERP; the core tool already computes silent reading time, so a reading-framed page is near-free - wordstotime.com proves one engine can rank for both clusters."
+    }
+  ]
+}
