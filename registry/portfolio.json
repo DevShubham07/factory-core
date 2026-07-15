@@ -86,11 +86,28 @@
     "group": "A",
     "id": "A5",
     "build_order": 2,
-    "state": "IDEA",
+    "state": "SCAFFOLDED",
     "cpm_tier": "low",
     "rank_difficulty": "medium — easiest build",
     "notes": "Paste text OR word-count input -> speaking time at 100-180 WPM (slider + slow/avg/fast presets) + silent-reading time. Live word/char count. Edge cases: empty input, huge paste (cap 200k chars), unicode. Landing pages e.g. /how-many-words-is-a-5-minute-speech/.",
-    "backup_domains": []
+    "backup_domains": [],
+    "keyword": "words to minutes",
+    "template_tag": "template-v0.2.0",
+    "updated_at": "2026-07-15T12:11:04.435Z",
+    "main_keyword": "words to minutes",
+    "gates": [
+      {
+        "gate": "G3",
+        "passed_at": "2026-07-15",
+        "evidence": [
+          "template-v0.2.0 scaffold",
+          "14/14 tests unmodified",
+          "CI run 29414473046 success",
+          "vercel 200+noindex"
+        ]
+      }
+    ],
+    "notes_override": "BUILT-AHEAD per operator instruction 2026-07-15 (continue creating other websites; batch domain purchases). G1 (Ahrefs volume + D-11 price) and G2 (spec approval) close in the bulk [HUMAN] session — scorecard 22.5/35 marginal-BUILD flagged for that review. Spec DRAFT; adversarial review in progress."
   },
   {
     "slug": "onlinepdruler",
